@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Header } from "@/app/_components/header/header";
+import { Footer } from "@/app/_components/footer/footer";
 
 //google font
 const figtree = Figtree({
@@ -70,7 +72,11 @@ export default function RootLayout({
       dir="rtl"
       className={`${figtree.variable} ${vazir.variable}`}
     >
-      <body>{children}</body>
+      <body className="bg-base-100 text-base-content min-h-screen grid grid-rows-[80px_1fr_auto]">
+        <Header />
+        <main className="flex flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
