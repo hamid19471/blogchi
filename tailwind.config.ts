@@ -55,6 +55,10 @@ const tailwindColors: Record<string, string> = {
 const config: Config = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
     colors: tailwindColors,
     extend: {},
   },
