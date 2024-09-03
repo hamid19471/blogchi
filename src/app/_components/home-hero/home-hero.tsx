@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "../button";
 
 export const HomeHero: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ export const HomeHero: React.FC = () => {
             می‌کند و به توسعه‌دهندگان کمک می‌کند تا به آخرین ترندها و فناوری‌های
             روز دسترسی داشته باشند.{" "}
           </p>
+          <Button variant="primary">تست دکمه</Button>
           <Image
             className="opacity-80"
             src="/images/frameworks.png"
