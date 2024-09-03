@@ -70,7 +70,7 @@ export default function RootLayout({
     <html
       lang="fa"
       dir="rtl"
-      className={`${figtree.variable} ${vazir.variable}`}
+      className={`dark ${figtree.variable} ${vazir.variable}`}
     >
       <body className="bg-base-100 text-base-content min-h-screen grid grid-rows-[80px_1fr_auto]">
         <Header />
