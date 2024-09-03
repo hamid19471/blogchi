@@ -74,7 +74,7 @@ export default function RootLayout({
     >
       <body className="bg-base-100 text-base-content min-h-screen grid grid-rows-[80px_1fr_auto]">
         <Header />
-        <main className="flex flex-1">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
