@@ -10,7 +10,7 @@ const generateDarkenColorFrom = (input: string, precentage = 0.07): string => {
 
 const generateForegroundColorFrom = (
   input: string,
-  precentage = 0.08
+  precentage = 0.8
 ): string => {
   return colord(input)
     .mix(colord(input).isDark() ? "white" : "black", precentage)
