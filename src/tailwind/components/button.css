@@ -1,0 +1,74 @@
+.btn {
+  @apply no-underline select-none border h-12 px-8 py-2 border-transparent rounded-lg;
+  @apply inline-flex items-center justify-center gap-2 transition-all duration-150 ease-in-out;
+  @apply bg-base-100 text-base-content outline-base-content;
+  @media (hover: hover) {
+    &:hover {
+      @apply border-base-300 bg-base-300 text-base-content;
+    }
+  }
+  &-primary {
+    @apply bg-primary text-primary-content outline-primary border-primary;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-primary-focus border-primary-focus;
+      }
+    }
+  }
+  &-secondary {
+    @apply bg-secondary text-secondary-content outline-secondary border-secondary;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-secondary-focus border-secondary-focus;
+      }
+    }
+  }
+  &-accent {
+    @apply bg-accent text-accent-content outline-accent border-accent;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-accent-focus border-accent-focus;
+      }
+    }
+  }
+  &-neutral {
+    @apply bg-neutral text-neutral-content outline-neutral border-neutral;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-neutral-focus border-neutral-focus;
+      }
+    }
+  }
+  &-info {
+    @apply bg-info text-info-content outline-info border-info;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-info border-info;
+      }
+    }
+  }
+  &-success {
+    @apply bg-success text-success-content outline-success border-success;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-success border-success;
+      }
+    }
+  }
+  &-warning {
+    @apply bg-warning text-warning-content outline-warning border-warning;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-warning border-warning;
+      }
+    }
+  }
+  &-error {
+    @apply bg-error text-error-content outline-error border-error;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-error border-error;
+      }
+    }
+  }
+}
