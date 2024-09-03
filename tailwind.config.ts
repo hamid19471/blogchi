@@ -60,7 +60,11 @@ const config: Config = {
       padding: "2rem",
     },
     colors: tailwindColors,
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "hero-section": "url('/images/tile.svg')",
+      },
+    },
   },
   plugins: [],
 };
