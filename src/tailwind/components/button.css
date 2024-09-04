@@ -1,7 +1,7 @@
 .btn {
   @apply no-underline select-none border h-12 px-8 py-2 border-transparent rounded-lg;
   @apply inline-flex items-center justify-center gap-2 transition-all duration-150 ease-in-out;
-  @apply bg-base-100 text-base-content outline-base-content;
+  @apply bg-base-300 text-base-content outline-base-content;
   @media (hover: hover) {
     &:hover {
       @apply border-base-300 bg-base-300 text-base-content scale-105;
@@ -16,7 +16,7 @@
     }
   }
   &-ghost {
-    @apply bg-base-300 text-base-content outline-base-content;
+    @apply bg-base-100 text-base-content outline-base-content;
     @media (hover: hover) {
       &:hover {
         @apply bg-base-300 text-base-content;
@@ -27,7 +27,7 @@
     @apply bg-secondary text-secondary-content outline-secondary border-secondary;
     @media (hover: hover) {
       &:hover {
-        @apply bg-secondary-focus border-secondary-focus;
+        @apply bg-secondary-focus border-secondary-focus text-secondary-content;
       }
     }
   }
@@ -35,12 +35,12 @@
     @apply bg-accent text-accent-content outline-accent border-accent;
     @media (hover: hover) {
       &:hover {
-        @apply bg-accent-focus border-accent-focus;
+        @apply bg-accent-focus border-accent-focus text-accent-content;
       }
     }
   }
   &-neutral {
-    @apply bg-neutral text-neutral-content outline-neutral border-neutral;
+    @apply bg-neutral text-base-content outline-neutral border-neutral;
     @media (hover: hover) {
       &:hover {
         @apply bg-neutral-focus border-neutral-focus;
@@ -51,7 +51,7 @@
     @apply bg-info text-info-content outline-info border-info;
     @media (hover: hover) {
       &:hover {
-        @apply bg-info border-info;
+        @apply bg-info border-info text-info-content;
       }
     }
   }
@@ -59,7 +59,7 @@
     @apply bg-success text-success-content outline-success border-success;
     @media (hover: hover) {
       &:hover {
-        @apply bg-success border-success;
+        @apply bg-success border-success text-success-content;
       }
     }
   }
@@ -67,7 +67,7 @@
     @apply bg-warning text-warning-content outline-warning border-warning;
     @media (hover: hover) {
       &:hover {
-        @apply bg-warning border-warning;
+        @apply bg-warning border-warning text-warning-content;
       }
     }
   }
@@ -75,7 +75,7 @@
     @apply bg-error text-error-content outline-error border-error;
     @media (hover: hover) {
       &:hover {
-        @apply bg-error border-error;
+        @apply bg-error border-error text-error-content;
       }
     }
   }
