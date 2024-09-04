@@ -9,7 +9,8 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest"
+    "test": "jest",
+    "jest:generate-output": "jest --json --outputFile=.jest-results.json"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
@@ -26,6 +27,7 @@
     "@storybook/addon-controls": "^8.2.9",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-jest": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
     "@storybook/addon-onboarding": "^8.2.9",
     "@storybook/blocks": "^8.2.9",
