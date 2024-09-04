@@ -37,13 +37,130 @@ export const ButtonSizes: Story = {
     </>
   ),
 };
-export const ButtonShapes: Story = {
+
+export const ButtonStateColors: Story = {
   render: () => (
     <>
-      <Button shape="default">Default</Button>
-      <Button shape="square">Square</Button>
-      <Button shape="full">Full</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="info">Info</Button>
+      <Button variant="warning">Warning</Button>
+      <Button variant="error">Error</Button>
+      <Button variant="success" isOutline={true}>
+        Success
+      </Button>
+      <Button variant="info" isOutline={true}>
+        Info
+      </Button>
+      <Button variant="warning" isOutline={true}>
+        Warning
+      </Button>
+      <Button variant="error" isOutline={true}>
+        Error
+      </Button>
+    </>
+  ),
+};
+
+export const ButtonOutline: Story = {
+  render: () => (
+    <>
+      <Button variant="primary" isOutline={true}>
+        Primary
+      </Button>
+      <Button variant="secondary" isOutline={true}>
+        Secondary
+      </Button>
+      <Button variant="neutral" isOutline={true}>
+        Neutral
+      </Button>
+      <Button variant="ghost" isOutline={true}>
+        Ghost
+      </Button>
+      <Button variant="accent" isOutline={true}>
+        Accent
+      </Button>
+      <Button variant="info" isOutline={true}>
+        Info
+      </Button>
+      <Button variant="success" isOutline={true}>
+        Success
+      </Button>
+      <Button variant="warning" isOutline={true}>
+        Warning
+      </Button>
+      <Button variant="error" isOutline={true}>
+        Error
+      </Button>
+    </>
+  ),
+};
+
+export const ButtonWide: Story = {
+  render: () => (
+    <>
       <Button shape="wide">Wide</Button>
+    </>
+  ),
+};
+
+export const ButtonFull: Story = {
+  render: () => (
+    <>
+      <Button shape="full">Full</Button>
+    </>
+  ),
+};
+
+export const ButtonSquare: Story = {
+  render: () => (
+    <>
+      <Button shape="square" size="tiny">
+        X
+      </Button>
+      <Button shape="square" size="small">
+        X
+      </Button>
+      <Button shape="square" size="normal">
+        X
+      </Button>
+      <Button shape="square" size="large">
+        X
+      </Button>
+    </>
+  ),
+};
+
+export const ButtonWithLoading: Story = {
+  render: () => (
+    <>
+      <Button
+        variant="neutral"
+        isLoading={true}
+        loadingText="Loading"
+        isDisabled={true}
+      ></Button>
+      <Button
+        variant="neutral"
+        isLoading={true}
+        loadingType="ring"
+        loadingText="Loading"
+        isDisabled={true}
+      ></Button>
+      <Button
+        variant="neutral"
+        isLoading={true}
+        isOutline={true}
+        loadingType="ring"
+        loadingText="Loading"
+        isDisabled={true}
+      ></Button>
+      <Button
+        variant="neutral"
+        isLoading={true}
+        isOutline={true}
+        loadingText="Loading"
+        isDisabled={true}
+      ></Button>
     </>
   ),
 };
