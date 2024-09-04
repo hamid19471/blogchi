@@ -164,3 +164,7 @@ export const ButtonWithLoading: Story = {
     </>
   ),
 };
+
+export const TestButton: Story = {
+  render: (args) => <Button {...args}>Click Here</Button>,
+};
