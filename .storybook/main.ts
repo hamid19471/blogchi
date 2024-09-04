@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
     "@storybook/addon-controls",
+    "@storybook/addon-jest",
   ],
   typescript: {
     reactDocgen: "react-docgen-typescript", // Allows TypeScript control in Storybook
