@@ -119,14 +119,14 @@
       }
     }
     &.btn-neutral {
-      @apply border-neutral text-neutral;
+      @apply border-neutral  text-base-content;
       @media (hover: hover) {
         &:hover {
           @apply border-neutral bg-neutral text-white;
         }
       }
     }
-    &.btn.info {
+    &.btn-info {
       @apply border-info text-info;
       @media (hover: hover) {
         &:hover {
@@ -142,7 +142,7 @@
         }
       }
     }
-    &.btn.warning {
+    &.btn-warning {
       @apply border-warning text-warning;
       @media (hover: hover) {
         &:hover {
@@ -150,7 +150,7 @@
         }
       }
     }
-    &.btn.error {
+    &.btn-error {
       @apply border-error text-error;
       @media (hover: hover) {
         &:hover {

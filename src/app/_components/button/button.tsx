@@ -1,11 +1,12 @@
 import classNames from "classnames";
 import { ButtonProps, ButtonShape } from "./button.types";
 import { Size } from "../types/size.type";
+import { Loading } from "../loading";
 
 const sizeClasses: Record<Size, string> = {
   tiny: "btn-xs",
   small: "btn-sm",
-  normal: "",
+  normal: "btn-md",
   large: "btn-lg",
 };
 
@@ -41,10 +42,11 @@ export const Button: React.FC<ButtonProps> = ({
     { "btn-animation": animatedIcon },
     { [`btn-${variant}`]: variant },
     { [`${sizeClasses[size]}`]: size },
-    { [`${shapeClasses[shape]}`]: shape }
+    { [`${shapeClasses[shape]}`]: shape },
   );
   return (
     <button type={type} disabled={isDisabled} className={classes} {...rest}>
+      {isLoading && <Loading loadingType={loadingType} />}
       {isLoading ? loadingText : children}
     </button>
   );
