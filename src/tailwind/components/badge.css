@@ -1,0 +1,42 @@
+.badge {
+  @apply inline-flex items-center gap-1 transition-all duration-200 ease-in-out leading-5 rounded-md font-semibold !bg-opacity-30 !border-opacity-30 w-fit px-3;
+  &-neutral {
+    @apply border-base-content bg-base-content text-base-content;
+  }
+  &-primary {
+    @apply border-primary bg-primary text-primary;
+  }
+  &-secondary {
+    @apply border-secondary bg-secondary text-secondary;
+  }
+  &-accent {
+    @apply border-accent bg-accent text-accent;
+  }
+  &-info {
+    @apply border-info bg-info text-info;
+  }
+  &-success {
+    @apply border-success bg-success text-success;
+  }
+  &-warning {
+    @apply border-warning bg-warning text-warning;
+  }
+  &-error {
+    @apply border-error bg-error text-error;
+  }
+  &-xs {
+    @apply h-5 text-xs font-bold;
+  }
+
+  &-sm {
+    @apply h-6 text-sm;
+  }
+
+  &-md {
+    @apply h-7 text-base;
+  }
+
+  &-lg {
+    @apply h-8 text-lg;
+  }
+}
