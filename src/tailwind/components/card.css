@@ -1,0 +1,18 @@
+.card {
+  @apply relative bg-base-50 overflow-hidden rounded-lg mb-20 transition-all duration-200;
+  &-body {
+    @apply p-4 flex flex-col flex-auto gap-2 text-sm font-light leading-6;
+  }
+  &-title {
+    @apply text-base-content text-xl mb-4 font-bold hover:text-primary hover:scale-105 transition-all duration-200 ease-in-out w-fit;
+  }
+  &-footer {
+    @apply p-4 flex items-center justify-between border-t border-base-25;
+    :where(a) {
+      @apply hover:text-primary;
+    }
+  }
+  &-body-section {
+    @apply flex items-center justify-between text-xs;
+  }
+}
