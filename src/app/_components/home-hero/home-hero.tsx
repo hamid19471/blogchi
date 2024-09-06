@@ -22,7 +22,14 @@ export const HomeHero: React.FC = () => {
             می‌کند و به توسعه‌دهندگان کمک می‌کند تا به آخرین ترندها و فناوری‌های
             روز دسترسی داشته باشند.{" "}
           </p>
-          <Button variant="primary">تست دکمه</Button>
+          <div className="flex items-center gap-x-4 my-4">
+            <Button variant="primary" size="large">
+              جدیدترین مقالات
+            </Button>
+            <Button size="large" variant="neutral">
+              دسته بندی‌ها
+            </Button>
+          </div>
           <Image
             className="opacity-80"
             src="/images/frameworks.png"
