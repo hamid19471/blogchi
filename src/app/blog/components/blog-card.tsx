@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { BlogCardProps } from "../types/blog-card.types";
 import Link from "next/link";
-import { BookmarkIcon, HeartIcon } from "lucide-react";
+import { BookmarkIcon, Clock, HeartIcon, UserIcon } from "lucide-react";
 import { toPersianNumber } from "@/utils/persian-number";
+import { Badge } from "@/app/_components/badge";
 
 export const BlogPostCard: React.FC<BlogCardProps> = ({
   title,
@@ -16,7 +17,7 @@ export const BlogPostCard: React.FC<BlogCardProps> = ({
   return (
     <div className="card">
       <figure>
-        <div className="relative h-[220px] w-[300px] overflow-hidden">
+        <div className="relative h-[220px] w-[100%] overflow-hidden">
           <Image
             src={coverImageUrl}
             alt={title}
@@ -30,8 +31,17 @@ export const BlogPostCard: React.FC<BlogCardProps> = ({
           <h2 className="card-title">{title}</h2>
         </Link>
         <div className="card-body-section">
-          <div>نویسنده: {author.name}</div>
-          <div>{toPersianNumber(readingTime)} دقیقه</div>
+          <div>
+            <Badge variant="accent">
+              <UserIcon size={14} /> {author.name}
+            </Badge>
+          </div>
+          <div>
+            <Badge variant="info">
+              <Clock size={14} />
+              {toPersianNumber(readingTime)} دقیقه
+            </Badge>
+          </div>
         </div>
       </div>
       <div className="card-footer">
