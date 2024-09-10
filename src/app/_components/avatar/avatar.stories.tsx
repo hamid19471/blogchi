@@ -13,6 +13,7 @@ type Story = StoryObj<typeof Avatar>;
 export const BadgeBrandColors: Story = {
   render: () => (
     <>
+      <Avatar variant="neutral" />
       <Avatar variant="primary" />
       <Avatar variant="secondary" />
       <Avatar variant="accent" />
@@ -38,7 +39,14 @@ export const AvatarSize: Story = {
 export const AvatarWithImage: Story = {
   render: () => (
     <>
-      <Avatar src="/images/hamid.webp" alt="avatar" />
+      <Avatar src="/images/hamid.webp" alt="avatar" variant="primary" />
+      <Avatar src="/images/hamid.webp" alt="avatar" variant="info" />
+      <Avatar src="/images/hamid.webp" alt="avatar" variant="secondary" />
+      <Avatar src="/images/hamid.webp" alt="avatar" variant="accent" />
+      <Avatar src="/images/hamid.webp" alt="avatar" variant="neutral" />
+      <Avatar src="/images/hamid.webp" alt="avatar" variant="success" />
+      <Avatar src="/images/hamid.webp" alt="avatar" variant="warning" />
+      <Avatar src="/images/hamid.webp" alt="avatar" variant="error" />
     </>
   ),
 };
