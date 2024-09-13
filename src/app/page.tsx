@@ -4,6 +4,7 @@ import { BlogPostsList } from "./blog/components/blog-posts-list";
 import { API_URL } from "@/configs/global";
 import { Button } from "./_components/button";
 import { ArrowLeft } from "lucide-react";
+import { Subscribtion } from "./_components/subscribtion/subscribtion";
 
 const getNewstBlot = async (): Promise<PostBlogs> => {
   const res = await fetch(`${API_URL}/post/list`, {
@@ -33,6 +34,10 @@ export default async function Home() {
           </Button>
         </div>
         <BlogPostsList posts={posts} />
+        <div className="mt-20 mb-12 relative">
+          <Subscribtion />
+          <div className="bg-primary pointer-events-none absolute left-1/2 aspect-square w-1/2 -translate-x-1/2 -top-96 rounded-full opacity-10 blur-3xl"></div>
+        </div>
       </section>
     </>
   );
