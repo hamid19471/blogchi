@@ -1,13 +1,7 @@
 import { API_URL } from "@/configs/global";
-import {
-  BadRequestError,
-  NetworkError,
-  NotFoundError,
-  UnhandledException,
-  UnuthorizedError,
-  ValidationError,
-} from "@/types/http-error.interface";
+import { ApiError } from "@/types/http-error.interface";
 import axios, { AxiosRequestConfig, AxiosRequestHeaders } from "axios";
+import { errorHandler, networkErrorStrategy } from "./http-error-strategies";
 
 const httpService = axios.create({
   baseURL: API_URL,
@@ -15,14 +9,6 @@ const httpService = axios.create({
     "Content-Type": "application/json",
   },
 });
-
-type ApiError =
-  | BadRequestError
-  | ValidationError
-  | NetworkError
-  | UnhandledException
-  | UnuthorizedError
-  | NotFoundError;
 
 httpService.interceptors.response.use(
   (response) => {
@@ -33,39 +19,10 @@ httpService.interceptors.response.use(
       const statusCode = error?.response?.status;
       if (statusCode >= 400) {
         const errorData: ApiError = error?.response?.data;
-        if (statusCode === 400 && !errorData.error) {
-          throw {
-            ...errorData,
-          } as BadRequestError;
-        }
-        if (statusCode === 400 && errorData.error) {
-          throw {
-            ...errorData,
-          } as ValidationError;
-        }
-        if (statusCode === 404) {
-          throw {
-            ...errorData,
-            detail: "سرویس مورد نظر یافت نشد",
-          } as NotFoundError;
-        }
-        if (statusCode === 403) {
-          throw {
-            ...errorData,
-            detail: "شما به این سرویس دسترسی ندارید",
-          } as UnuthorizedError;
-        }
-        if (statusCode >= 500) {
-          throw {
-            ...errorData,
-            detail: "خطایی رخ داده است. لطفا مجددا تلاش کنید",
-          } as UnhandledException;
-        }
+        errorHandler[statusCode](errorData);
       }
     } else {
-      throw {
-        detail: "سرویس مورد نظر در دسترس نیست",
-      };
+      networkErrorStrategy();
     }
   }
 );
