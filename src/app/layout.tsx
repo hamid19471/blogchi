@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/app/_components/header/header";
 import { Footer } from "@/app/_components/footer/footer";
+import QueryProvider from "@/providers/react-query-provider";
 
 //google font
 const figtree = Figtree({
@@ -73,9 +74,11 @@ export default function RootLayout({
       className={`dark ${figtree.variable} ${vazir.variable}`}
     >
       <body className="bg-base-100 text-base-content min-h-screen grid grid-rows-[80px_1fr_auto]">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <QueryProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );
