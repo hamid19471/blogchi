@@ -13,6 +13,7 @@
     "jest:generate-output": "jest --json --outputFile=.jest-results.json"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.56.2",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
     "classnames": "^2.5.1",
