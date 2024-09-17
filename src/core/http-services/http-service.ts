@@ -5,6 +5,7 @@ import { errorHandler, networkErrorStrategy } from "./http-error-strategies";
 
 const httpService = axios.create({
   baseURL: API_URL,
+  withCredentials: true,
   headers: {
     "Content-Type": "application/json",
   },
