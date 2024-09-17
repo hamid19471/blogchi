@@ -5,6 +5,7 @@ import "./globals.css";
 import { Header } from "@/app/_components/header/header";
 import { Footer } from "@/app/_components/footer/footer";
 import QueryProvider from "@/providers/react-query-provider";
+import NextTopLoader from "nextjs-toploader";
 
 //google font
 const figtree = Figtree({
@@ -74,6 +75,7 @@ export default function RootLayout({
       className={`dark ${figtree.variable} ${vazir.variable}`}
     >
       <body className="bg-base-100 text-base-content min-h-screen grid grid-rows-[80px_1fr_auto]">
+        <NextTopLoader showSpinner={false} color="var(--color-primary)" />
         <QueryProvider>
           <Header />
           <main>{children}</main>
