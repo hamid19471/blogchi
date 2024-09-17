@@ -9,7 +9,7 @@ export const CardPlaceholder: React.FC<CardPlaceholderProps> = ({
   return (
     <>
       {counts.map((count) => (
-        <div className="card" key={`card-placeholder-${count}`}>
+        <div className="card" key={`card-placeholder-${count} ${className}`}>
           <figure>
             <div className="relative h-[220px] w-[100%] overflow-hidden opacity-60">
               <div className="absolute flex items-center justify-center inset-0 bg-base-100 opacity-35 m-2 rounded-md animate-pulse">
