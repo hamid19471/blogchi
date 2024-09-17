@@ -12,14 +12,18 @@ export const Header: React.FC = () => {
         <MainNavigation />
         <div className="mr-auto">
           <div className="flex items-center gap-x-2">
-            <Button variant="primary" size="normal">
-              <UserPlus size={18} />
-              <Link href={"/signup"}>ثبت نام</Link>
-            </Button>
-            <Button variant="secondary" size="normal">
-              <Link href={"/signin"}>ورود</Link>
-              <User size={18} />
-            </Button>
+            <Link href={"/signup"}>
+              <Button variant="primary" size="normal">
+                <UserPlus size={18} />
+                ثبت نام
+              </Button>
+            </Link>
+            <Link href={"/signin"}>
+              <Button variant="secondary" size="normal">
+                ورود
+                <User size={18} />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
