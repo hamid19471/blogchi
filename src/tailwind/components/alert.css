@@ -1,0 +1,27 @@
+.alert {
+  @apply p-3 rounded-lg border border-base-25 text-base flex gap-2 items-center justify-start w-full;
+  &-primary {
+    @apply border-primary bg-base-100 text-base;
+  }
+  &-secondary {
+    @apply border-secondary bg-base-100 text-base;
+  }
+  &-accent {
+    @apply border-accent bg-base-100 text-base;
+  }
+  &-info {
+    @apply border-info bg-base-100 text-base;
+  }
+  &-success {
+    @apply border-success bg-base-100 text-base;
+  }
+  &-warning {
+    @apply border-warning bg-base-100 text-base;
+  }
+  &-error {
+    @apply border-error bg-base-100 text-base;
+  }
+  &-neutral {
+    @apply border-base-25 bg-base-100 text-base;
+  }
+}
