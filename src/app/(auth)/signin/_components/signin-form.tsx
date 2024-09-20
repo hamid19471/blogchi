@@ -1,10 +1,10 @@
 "use client";
 
 import { Button } from "@/app/_components/button";
-import { Textbox } from "@/app/_components/textbox";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { SigninFormValues } from "../_types/signin.interface";
+import { InputText } from "@/app/_components/form-inputs";
 
 export const SigninForm = () => {
   const {
@@ -29,25 +29,28 @@ export const SigninForm = () => {
       <p className="font-light mb-12">ورود به حساب کاربری</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col gap-4 mb-12">
-          <Textbox
-            {...register("email", {
+          <InputText
+            register={register}
+            name="email"
+            errors={errors}
+            rules={{
               required: {
                 value: true,
-                message: "ایمیل خود را وارد کنید",
+                message: "لطفا ایمیل خود را وارد کنید",
               },
-            })}
-            placeholder="پست الکترونیک"
-            type="email"
+            }}
           />
-          <Textbox
-            {...register("password", {
+          <InputText
+            register={register}
+            name="password"
+            type="password"
+            errors={errors}
+            rules={{
               required: {
                 value: true,
-                message: "رمز عبور خود را وارد کنید",
+                message: "لطفا رمز عبور خود را وارد کنید",
               },
-            })}
-            placeholder="رمز عبور"
-            type="password"
+            }}
           />
         </div>
         <div>
