@@ -14,7 +14,7 @@ const TextInput = <TFormValues extends FieldValues>({
   const error = get(errors, name);
   const hasError = !!error;
   return (
-    <>
+    <div className="flex flex-col w-full">
       <Textbox
         {...register(name, rules)}
         {...(hasError ? { variant: "error" } : { variant: variant })}
@@ -22,7 +22,7 @@ const TextInput = <TFormValues extends FieldValues>({
         type={type}
       />
       {hasError && <p className="mt-1 text-xs text-error">{error?.message}</p>}
-    </>
+    </div>
   );
 };
 export default TextInput;
