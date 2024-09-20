@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { SigninFormValues } from "../_types/signin.interface";
 import { InputText } from "@/app/_components/form-inputs";
+import { useSignin } from "../_api/signin";
+import { useRouter } from "next/navigation";
 
 export const SigninForm = () => {
   const {
@@ -19,8 +21,16 @@ export const SigninForm = () => {
     },
   });
 
+  const router = useRouter();
+
+  const { submit, isPending } = useSignin({
+    onSuccess: () => {
+      router.push("/");
+    },
+  });
+
   const onSubmit = (data: SigninFormValues) => {
-    console.log(data);
+    submit(data);
   };
 
   return (
@@ -54,7 +64,12 @@ export const SigninForm = () => {
           />
         </div>
         <div>
-          <Button type="submit" variant="primary" className="w-full">
+          <Button
+            type="submit"
+            variant="primary"
+            className="w-full"
+            isLoading={isPending}
+          >
             ورود
           </Button>
         </div>
