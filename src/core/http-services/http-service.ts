@@ -38,7 +38,7 @@ async function apiBase<T>(
 
 async function readData<T>(
   url: string,
-  headers: AxiosRequestHeaders
+  headers?: AxiosRequestHeaders
 ): Promise<T> {
   const options: AxiosRequestConfig = {
     method: "GET",
@@ -50,7 +50,7 @@ async function readData<T>(
 async function postData<TModel, TResult>(
   url: string,
   data: TModel,
-  headers: AxiosRequestHeaders
+  headers?: AxiosRequestHeaders
 ): Promise<TResult> {
   const options: AxiosRequestConfig = {
     method: "POST",
@@ -64,7 +64,7 @@ async function postData<TModel, TResult>(
 async function updateData<TModel, TResult>(
   url: string,
   data: TModel,
-  headers: AxiosRequestHeaders
+  headers?: AxiosRequestHeaders
 ): Promise<TResult> {
   const options: AxiosRequestConfig = {
     method: "PUT",
@@ -77,7 +77,7 @@ async function updateData<TModel, TResult>(
 
 async function deleteData(
   url: string,
-  headers: AxiosRequestHeaders
+  headers?: AxiosRequestHeaders
 ): Promise<void> {
   const options: AxiosRequestConfig = {
     method: "DELETE",
